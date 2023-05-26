@@ -4,7 +4,9 @@ name: Scheduled check
 on:
   schedule:
     - cron: "* * * * *"
-
+  repository_dispatch:
+    types: [uptime]
+  workflow_dispatch:
 jobs:
   health_check_job:
     runs-on: ubuntu-latest
