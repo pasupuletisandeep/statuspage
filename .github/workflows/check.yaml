@@ -12,5 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run Shell Script
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.status || github.token }}
         id: shell_script_run
         run: bash ./health-check.sh
