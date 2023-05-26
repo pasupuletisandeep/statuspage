@@ -10,10 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     name: Check all sites
     steps:
-      - uses: actions/checkout@v3
-      - name: Run Shell Script
+      - name: Checkout
+        uses: actions/checkout@v3
         with:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.status || github.token }}
+      - name: Run Shell Script
         id: shell_script_run
         run: bash ./health-check.sh
