@@ -3,7 +3,7 @@ name: Scheduled check
 # Controls when the action will run.
 on:
   schedule:
-    - cron: "*/1 * * * *"
+    - cron: "* * * * *"
 
 jobs:
   health_check_job:
