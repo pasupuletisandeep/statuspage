@@ -5,7 +5,7 @@ on:
   schedule:
     - cron: "* * * * *"
   repository_dispatch:
-    types: [uptime]
+    types: [status]
   workflow_dispatch:
 jobs:
   health_check_job:
