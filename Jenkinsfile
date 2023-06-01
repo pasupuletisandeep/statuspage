@@ -2,19 +2,9 @@ pipeline {
     agent none
 
     stages {
-        stage('Build') {
+        stage('Run') {
             steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                sh '/bin/bash health-check.sh'
             }
         }
     }
