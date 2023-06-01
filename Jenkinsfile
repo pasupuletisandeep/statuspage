@@ -5,7 +5,7 @@ pipeline {
         stage('Run') {
             steps {
                 sh "curl --write-out '%{http_code}' --silent --output /dev/null https://google.com"
-                sh """
+                sh '''
                 commit=true
 origin=$(git remote get-url origin)
 if [[ $origin == *statsig-io/statuspage* ]]
@@ -75,7 +75,7 @@ then
   git add -A --force logs/
   git commit -am '[Automated] Update Health Check Logs'
   git push
-fi"""
+fi'''
             }
         }
     }
