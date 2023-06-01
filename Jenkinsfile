@@ -6,7 +6,15 @@ pipeline {
             steps {
                 sh "curl --write-out '%{http_code}' --silent --output /dev/null https://google.com"
                 sh '''
+                # In the original repository we'll just print the result of status checks,
+# without committing. This avoids generating several commits that would make
+# later upstream merges messy for anyone who forked us.
 commit=true
+origin=$(git remote get-url origin)
+if [[ $origin == *statsig-io/statuspage* ]]
+then
+  commit=false
+fi
 
 KEYSARRAY=()
 URLSARRAY=()
@@ -70,7 +78,8 @@ then
   git add -A --force logs/
   git commit -am '[Automated] Update Health Check Logs'
   git push
-fi'''
+fi
+'''
             }
         }
     }
