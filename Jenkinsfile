@@ -6,12 +6,7 @@ pipeline {
             steps {
                 sh "curl --write-out '%{http_code}' --silent --output /dev/null https://google.com"
                 sh '''
-                commit=true
-origin=$(git remote get-url origin)
-if [[ $origin == *statsig-io/statuspage* ]]
-then
-  commit=false
-fi
+commit=true
 
 KEYSARRAY=()
 URLSARRAY=()
