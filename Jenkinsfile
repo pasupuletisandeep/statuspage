@@ -3,6 +3,7 @@ pipeline {
     
     environment {
         Login = credentials('jenkins-token')
+    }
 
     stages {
         stage('Run') {
