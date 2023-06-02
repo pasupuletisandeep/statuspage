@@ -64,7 +64,7 @@ done
 
 if [[ $commit == true ]]
 then
-  git init
+  git branch
   git add -A --force logs/
   git commit -am "[Automated] Update Health Check Logs" --allow-empty
   git push -u origin main
