@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    
+    environment {
+        Login = credentials('jenkins-token')
 
     stages {
         stage('Run') {
@@ -14,7 +17,7 @@ pipeline {
                 git config --global user.email 'sandeep.vinny@gmail.com'
                 git add -A --force logs/
                 git commit -am '[Automated] Update Health Check Logs'
-                git push https://GITHUB_APP:$GITHUB_ACCESS_TOKEN@github.com/pasupuletisandeep/statuspage.git HEAD:main
+                git push https://sandeep:$jenkins-token@github.com/pasupuletisandeep/statuspage.git HEAD:main
                 """
                 }
             }
