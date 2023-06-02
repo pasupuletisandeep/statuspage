@@ -64,9 +64,7 @@ done
 
 if [[ $commit == true ]]
 then
-  echo 'git branch'
-  git init
   git add .
-  git commit -am "[Automated] Update Health Check Logs" --allow-empty
+  git commit -am "[Automated] Update Health Check Logs" .
   git push -u origin main
 fi
