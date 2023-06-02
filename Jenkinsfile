@@ -13,7 +13,7 @@ pipeline {
                 sh """
                 git add -A --force logs/
                 git commit -am '[Automated] Update Health Check Logs'
-                git push https://sandeep:$Login@github.com/pasupuletisandeep/statuspage.git HEAD:main
+                git push https://$Login@github.com/pasupuletisandeep/statuspage.git HEAD:main
                 """
             }
         }
