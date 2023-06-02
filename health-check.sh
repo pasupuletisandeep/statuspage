@@ -66,5 +66,5 @@ if [[ $commit == true ]]
 then
   git add .
   git commit -am "[Automated] Update Health Check Logs" .
-  git push -u origin main
+  git push
 fi
