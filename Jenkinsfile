@@ -15,7 +15,7 @@ pipeline {
                 git config --global user.email 'sandeep.vinny@gmail.com'
                 git add -A --force logs/
                 git commit -am '[Automated] Update Health Check Logs'
-                git push https://sandeep:$jenkins-token@github.com/pasupuletisandeep/statuspage.git HEAD:main
+                git push https://sandeep:$Login@github.com/pasupuletisandeep/statuspage.git HEAD:main
                 """
             }
         }
