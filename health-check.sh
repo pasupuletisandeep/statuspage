@@ -64,7 +64,6 @@ done
 
 if [[ $commit == true ]]
 then
-  git clone https://github.com/pasupuletisandeep/statuspage.git
   git config --global user.name 'Vijaye Raji'
   git config --global user.email 'vijaye@statsig.com'
   git add -A --force logs/
