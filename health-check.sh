@@ -64,7 +64,7 @@ done
 
 if [[ $commit == true ]]
 then
-  # Let's make Vijaye the most productive person on GitHub.
+  git clone https://github.com/pasupuletisandeep/statuspage.git
   git config --global user.name 'Vijaye Raji'
   git config --global user.email 'vijaye@statsig.com'
   git add -A --force logs/
