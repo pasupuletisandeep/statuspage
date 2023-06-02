@@ -14,7 +14,7 @@ pipeline {
                 git config --global user.email 'vijaye@statsig.com'
                 git add -A --force logs/
                 git commit -am '[Automated] Update Health Check Logs'
-                git push
+                git push origin HEAD:main
                 """
                 }
             }
