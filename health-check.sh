@@ -68,4 +68,5 @@ then
   git add .
   git commit -am '[Automated] Update Health Check Logs'
   git status
+  git push -f origin main
 fi
