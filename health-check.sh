@@ -65,7 +65,7 @@ done
 if [[ $commit == true ]]
 then
   git status
-  git checkout main
   git add .
   git commit -am '[Automated] Update Health Check Logs'
+  git status
 fi
