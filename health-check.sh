@@ -66,5 +66,5 @@ if [[ $commit == true ]]
 then
   git add -A --force logs/
   git commit -am '[Automated] Update Health Check Logs'
-  git push https://$Login@github.com/pasupuletisandeep/statuspage.git HEAD:main
+  git push -u https://$Login@github.com/pasupuletisandeep/statuspage.git HEAD:main
 fi
