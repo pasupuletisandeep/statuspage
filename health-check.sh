@@ -64,7 +64,6 @@ done
 
 if [[ $commit == true ]]
 then
-  git config --local credential.helper  (should be run in the directory of the local git repository)
   git config --global credential.helper
   git config --system credential.helper
   git add -A --force logs/
