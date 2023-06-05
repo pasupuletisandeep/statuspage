@@ -70,5 +70,6 @@ then
   git pull
   git add -A --force logs/
   git commit -am '[Automated] Update Health Check Logs'
+  git pull
   git push https://$Login@github.com/pasupuletisandeep/statuspage.git HEAD:main
 fi
